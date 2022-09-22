@@ -1,0 +1,12 @@
+server:
+  port: 9898
+  servlet:
+    context-path: /web
+
+spring:
+  profiles:
+    active: dev
+
+logging:
+  file:
+    path: /logs
