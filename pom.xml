@@ -7,6 +7,7 @@
     <name>my-spring-boot-demo</name>
     <modules>
         <module>demo-webserver</module>
+        <module>demo-aop</module>
     </modules>
 
     <groupId>com.yellowzp</groupId>
