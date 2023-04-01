@@ -8,6 +8,7 @@
     <modules>
         <module>demo-webserver</module>
         <module>demo-aop</module>
+        <module>demo-database</module>
     </modules>
 
     <groupId>com.yellowzp</groupId>
