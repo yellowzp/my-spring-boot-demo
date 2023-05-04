@@ -4,7 +4,8 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://192.168.154.128:3306/demo?useUnicode=true&characterEncoding=UTF8
+#    url: jdbc:mysql://192.168.154.128:3306/demo?useUnicode=true&characterEncoding=UTF8
+    url: jdbc:mysql://192.168.3.222:3306/demo?useUnicode=true&characterEncoding=UTF8
     username: demo
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -13,7 +14,7 @@ spring:
       min-idle: 3
       max-active: 20
       max-wait: 60000
-      filters: stat,wall,log4j
+      filters: stat,wall
       web-stat-filter:
         enabled: true
         url-pattern: /*
@@ -24,3 +25,7 @@ spring:
         reset-enable: false
         login-username: admin
         login-password: admin
+
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
