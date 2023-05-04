@@ -3,9 +3,9 @@ package com.example.demodatabase.entities;
 import lombok.Data;
 
 @Data
-public class UserEntities {
+public class UserEntity {
 
-    private String id;
+    private Long id;
 
     private String userId;
 

@@ -1,11 +1,17 @@
 package com.example.demodatabase.service.svcinterface;
 
-import com.example.demodatabase.entities.UserEntities;
+import com.example.demodatabase.entities.UserEntity;
 
 import java.util.List;
 
 public interface IUserService {
 
-    List<UserEntities> getList();
+    List<UserEntity> getList();
+
+    int add(UserEntity user);
+
+    int modify(UserEntity user);
+
+    int remove(Long id);
 
 }
