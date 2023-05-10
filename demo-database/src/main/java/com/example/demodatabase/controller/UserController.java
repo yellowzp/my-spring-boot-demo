@@ -37,7 +37,7 @@ public class UserController {
     }
 
     @PostMapping("/api/user/remove/{id}")
-    public ResponseEntity<Object> modify(@PathVariable(value = "id") Long id) {
+    public ResponseEntity<Object> remove(@PathVariable(value = "id") Long id) {
         ResponseEntity<Object> rsp = new ResponseEntity<>();
         rsp.setData(userService.remove(id));
         return rsp;
