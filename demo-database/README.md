@@ -1,5 +1,5 @@
 # demo-database
 
-1. add druid module
+1. datasource druid
 2. mysql support
 3. mybatis

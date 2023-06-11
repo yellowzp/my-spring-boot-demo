@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demodatabase.dao.IUserDao">
+    
+    <resultMap id="entity" type="com.example.demodatabase.entities.UserEntity">
+        <result column="user_id" property="userId"></result>
+        <result column="user_name" property="userName"></result>
+    </resultMap>
+
+    <sql id="fields">
+        t.id,
+        t.user_id,
+        t.user_name,
+        t.password
+    </sql>
+
+    <insert id="insert" parameterType="com.example.demodatabase.entities.UserEntity">
+        insert into user
+        (
+            user_id,
+            user_name,
+            password
+        ) values (
+            #{userId},
+            #{userName},
+            #{password}
+        )
+    </insert>
+
+    <update id="updateById" parameterType="com.example.demodatabase.entities.UserEntity">
+        update user t
+        <set>
+            <if test="userName != null and userName != ''">
+                t.user_name = #{userName},
+            </if>
+            <if test="password != null and password != ''">
+                t.password = #{password},
+            </if>
+        </set>
+        where t.id = #{id}
+    </update>
+
+
+    <delete id="deleteById">
+        <if test="id != null">
+            delete from user where id = #{id}
+        </if>
+    </delete>
+
+    <select id="getList" resultMap="entity">
+        select
+            <include refid="fields"></include>
+        from user t
+    </select>
+</mapper>
