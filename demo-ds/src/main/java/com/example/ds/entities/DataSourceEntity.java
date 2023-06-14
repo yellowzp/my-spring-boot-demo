@@ -45,4 +45,9 @@ public class DataSourceEntity {
      * 数据库名
      */
     private String database;
+
+    /**
+     * url
+     */
+    private String url;
 }

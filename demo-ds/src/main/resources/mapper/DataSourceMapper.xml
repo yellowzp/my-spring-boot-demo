@@ -12,7 +12,8 @@
         `password`,
         `ip`,
         `port`,
-        `database`
+        `database`,
+        `url`
     </sql>
 
 
@@ -25,7 +26,8 @@
             `password`,
             `ip`,
             `port`,
-            `database`
+            `database`,
+            `url`
         )
         values
         (
@@ -35,7 +37,8 @@
             #{password},
             #{ip},
             #{port},
-            #{database}
+            #{database},
+            #{url}
         )
     </insert>
 
@@ -62,6 +65,9 @@
             </if>
             <if test="database != null">
                 database = #{database},
+            </if>
+            <if test="url != null">
+                url = #{url},
             </if>
         </set>
         from datasource
