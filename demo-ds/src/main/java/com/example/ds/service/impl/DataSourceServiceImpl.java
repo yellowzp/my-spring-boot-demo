@@ -12,25 +12,25 @@ import java.util.List;
 public class DataSourceServiceImpl implements IDataSourceService {
 
     @Autowired
-    private IDataSourceDao dao;
+    private IDataSourceDao dataSourceDao;
 
     @Override
     public List<DataSourceEntity> getList() {
-        return this.dao.getList();
+        return this.dataSourceDao.getList();
     }
 
     @Override
     public int add(DataSourceEntity var) {
-        return this.dao.add(var);
+        return this.dataSourceDao.add(var);
     }
 
     @Override
     public int modify(DataSourceEntity var) {
-        return this.dao.modify(var);
+        return this.dataSourceDao.modify(var);
     }
 
     @Override
     public int remove(Long id) {
-        return this.dao.remove(id);
+        return this.dataSourceDao.remove(id);
     }
 }

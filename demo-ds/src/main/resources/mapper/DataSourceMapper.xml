@@ -5,27 +5,27 @@
 <mapper namespace="com.example.ds.dao.IDataSourceDao">
 
     <sql id="fields">
-        id,
-        name,
-        type,
-        account,
-        password,
-        ip,
-        port,
-        database
+        `id`,
+        `name`,
+        `type`,
+        `account`,
+        `password`,
+        `ip`,
+        `port`,
+        `database`
     </sql>
 
 
     <insert id="add" parameterType="com.example.ds.entities.DataSourceEntity">
         insert into datasource
         (
-            name,
-            type,
-            account,
-            password,
-            ip,
-            port,
-            database
+            `name`,
+            `type`,
+            `account`,
+            `password`,
+            `ip`,
+            `port`,
+            `database`
         )
         values
         (

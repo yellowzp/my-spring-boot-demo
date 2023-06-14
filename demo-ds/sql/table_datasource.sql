@@ -20,3 +20,6 @@ CREATE TABLE `local_info`  (
    PRIMARY KEY (`id`) USING BTREE,
    INDEX `local_info_idx`(`var`) USING BTREE
 ) ENGINE = InnoDB COMMENT = '本地信息';
+
+insert into datasource (`name`, `type`, `account`, `password`, `ip`, `port`, `database`)
+values ('node2mysql', 'MYSQL_8', 'demo', '123456', '192.168.3.223', '3306', 'demo');
