@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DruidController {
 
-//    @Autowired
-//    private Map<Object, Object> targetDataSources;
-
     @Autowired
     private DynamicDataSource dynamicDataSource;
 

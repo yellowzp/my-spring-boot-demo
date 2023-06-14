@@ -22,16 +22,6 @@ import javax.sql.DataSource;
 @Configuration
 public class DruidDynamicAutoConfiguration {
 
-
-//    /**
-//     * 暴露 targetDataSources 方便增删数据源
-//     * @return ...
-//     */
-//    @Bean
-//    public Map<Object, Object> targetDataSources() {
-//        return new HashMap<>();
-//    }
-
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.druid.master")
     public DataSource masterDataSource() {
