@@ -6,7 +6,6 @@
     <packaging>pom</packaging>
     <name>my-spring-boot-demo</name>
     <modules>
-        <module>demo-webserver</module>
         <module>demo-aop</module>
         <module>demo-database</module>
         <module>demo-server</module>
