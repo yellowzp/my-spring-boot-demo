@@ -58,6 +58,7 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
             dataSource.close();
             targetDataSourceMap.remove(id);
         }
+        this.afterPropertiesSet();
     }
 
     public DynamicDataSource(DataSourceProperties dataSourceProperties, DataSource masterDataSource) {
