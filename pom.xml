@@ -9,6 +9,7 @@
         <module>demo-aop</module>
         <module>demo-database</module>
         <module>demo-server</module>
+        <module>demo-shiro</module>
     </modules>
 
     <groupId>com.yellowzp</groupId>
